@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inbenta chatbot hosted with style</title>
+    <script src="https://sdk.inbenta.io/chatbot/1.16.0/inbenta-chatbot-sdk.js"></script>
+    <style>
+        /* body {background-color: powderblue;}
+        h1   {color: blue;}
+        p    {color: red;} */
+    </style>
+</head>
+<body >
+    <!-- URL https://rawgit.com/thibaulthulaux/inbenta/main/se_6.html -->
+</body>
+</html>
+<script>
+var authorization = {
+    domainKey:"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJwcm9qZWN0IjoidGh1bGF1eF9jaGF0Ym90X2ZyIiwiZG9tYWluX2tleV9pZCI6IkJkak9ic1lOWThZQWJyV2E0Wm5kMFE6OiJ9.N5TozT5fKIXHhI4oXloRppGrFe_vGd2GelvFZ3ofw-v_3sf42ku-M2_oO5l8WQ25dN0hKZHWkLuYNzSX9hqKXA",
+    inbentaKey:"BdhH6rwlwkAVG5TV7pYUfJBIhUyINhkaSpMdMWK/Sic="
+}
+    InbentaChatbotSDK.buildWithDomainCredentials(authorization,
+        config = {
+            labels: {
+                en: {
+                    // 'yes' : 'Yes',
+                    // 'no' : 'No',
+                    // 'generic-error-message' : 'The format of your answer is not valid',
+                    // 'enter-question' : 'Enter your question',
+                    'interface-title' : 'Nutritionniste',
+                    // 'guest-name' : 'You',
+                    // 'see-more' : 'More info',
+                    // 'help-question' : 'Do you need help?',
+                    // 'thanks' : 'Thanks!',
+                    // 'rate-content' : 'Was this answer helpful?',
+                    // 'form-message' : 'Please tell us why',
+                    // 'submit' : 'Submit',
+                    // 'alert-title' : 'OOOOPS...!',
+                    // 'alert-message' : 'Something went wrong, please click the button to reload.',
+                    // 'alert-button' : 'Try again',
+                    // 'agent-joined' : '{agentName} has joined the chat',
+                    // 'agent-left' : '{agentName} has left the chat',
+                    // 'wait-for-agent' : 'Waiting for an agent...',
+                    // 'no-agents' : 'No agent available',
+                    // 'close-chat' : 'Do you want to close this chat?<p><div class="confirmation-box__subtitle">You will lose the entire conversation.</p></div>',
+                    // 'close-agent' : 'Do you want to leave the conversation with this agent?',
+                    // 'chat-closed' : 'Chat closed',
+                    // 'chat-ticket' : '{ticketId}',
+                    // 'download' : 'Download',
+                    // 'escalate-chat' : 'Do you want to start a chat with a human agent?',
+                    // 'agent-typing': '{agentName} is typing',
+                    // 'agents-typing': '{agentName} and {agentName2}  are typing',
+                    // 'several-typing': 'Several people are typing',
+                    // 'choose-option': 'Choose an option',
+                    // 'selected-option': 'You have selected {variableLabel}',
+                    // 'related-content-title': 'You might also be interested in:',
+                    // 'created-ticket': 'Your ticket ID {ticketId} has been successfully created.',
+                    // 'failed-created-ticket': 'Could not create a ticket.',
+                }
+            }
+        }
+    );
+</script>
