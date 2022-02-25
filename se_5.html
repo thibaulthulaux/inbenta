@@ -10,9 +10,52 @@
 </html>
 <script>
 var authorization = {
-  domainKey:"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJwcm9qZWN0IjoidGh1bGF1eF9jaGF0Ym90X2ZyIiwiZG9tYWluX2tleV9pZCI6IkJkak9ic1lOWThZQWJyV2E0Wm5kMFE6OiJ9.N5TozT5fKIXHhI4oXloRppGrFe_vGd2GelvFZ3ofw-v_3sf42ku-M2_oO5l8WQ25dN0hKZHWkLuYNzSX9hqKXA",
-  inbentaKey:"BdhH6rwlwkAVG5TV7pYUfJBIhUyINhkaSpMdMWK/Sic="
+    domainKey:"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJwcm9qZWN0IjoidGh1bGF1eF9jaGF0Ym90X2ZyIiwiZG9tYWluX2tleV9pZCI6IkJkak9ic1lOWThZQWJyV2E0Wm5kMFE6OiJ9.N5TozT5fKIXHhI4oXloRppGrFe_vGd2GelvFZ3ofw-v_3sf42ku-M2_oO5l8WQ25dN0hKZHWkLuYNzSX9hqKXA",
+    inbentaKey:"BdhH6rwlwkAVG5TV7pYUfJBIhUyINhkaSpMdMWK/Sic="
 }
 
- InbentaChatbotSDK.buildWithDomainCredentials(authorization);
-</script>
+    InbentaChatbotSDK.buildWithDomainCredentials(authorization,
+      {
+        lang:'fr',
+        answers:{
+          answerAttributes: ['ANSWER_TEXT'],
+          sideBubbleAttributes: ['SIDEBUBBLE_TEXT'],
+          maxRelatedContents: 3,
+        },
+        proactiveWelcome : true,
+        delayOnAnswer: 700,
+        usertype: 0,
+        environment: "development",
+        launcher: {
+          title:"InbentaBotSDK"
+        },
+        labels: {
+          en: {
+            'yes' : 'Sure',
+            'no' : 'Nope',
+            'generic-error-message' : 'Please try to answer again',
+            'enter-question' : 'Ask here',
+            'interface-title' : 'SDK Demo',
+            'guest-name' : 'You',
+            'help-question' : 'What can I help you with?',
+            'thanks' : 'Thank you!',
+            'rate-content' : 'Did it help?',
+            'form-message' : 'Please tell us why',
+            'submit' : 'Send'
+          }
+        },
+        ratingOptions: [
+          {
+            id: 1,
+            label: 'yes',
+            comment: false
+          },
+          {
+            id: 2,
+            label: 'no',
+            comment: true
+          }
+        ],
+      }
+    );
+  </script>
