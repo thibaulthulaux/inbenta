@@ -16,23 +16,31 @@
     }
     InbentaChatbotSDK.buildWithDomainCredentials(authorization,
         config = {
+            environment:'production',
+            inputCharacterCounter:true,
+            inputCharacterCounterMax:256,
             labels: {
                 en: {
-                    'interface-title' : 'Nutritionniste'
+                    'interface-title' : 'Nutritionniste',
                 }
             },
-            // ratingOptions: [
-            //     {
-            //     id: 1,
-            //     label: 'yes',
-            //     comment: false
-            //     },
-            //     {
-            //     id: 2,
-            //     label: 'no',
-            //     comment: true
-            //     }
-            // ],
+            lang: 'fr',
+            ratingOptions: [
+            {
+                id: 1,
+                label: 'yes',
+                comment: false,
+                response: "Thank you!"
+            },
+            {
+                id: 2,
+                label: 'no',
+                comment: true,
+                response: "We are sorry about that.",
+                customClass:'custom-inbentaButton'
+            }
+            ,]
+
         }
     );
 </script>
